@@ -1,0 +1,79 @@
+
+@import '../../@theme/styles/themes';
+
+@include nb-install-component() {
+  ngx-chartjs-bar {
+    display: block;
+    height: nb-theme(card-height-medium);
+    width: 100%;
+
+    ::ng-deep chart {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  :host {
+    display: block;
+    max-height: 25rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .card-row {
+    display: flex;
+    margin: 0 -0.5rem;
+  }
+  @media (max-width: 1280px) {
+    .card-row{
+      flex-direction: column;
+    }
+  }
+  
+  .card-col {
+    flex: 1 0 calc(33% - 1rem);
+    margin: 0 0.5rem;
+  }
+  // изменение ширины колонок
+  .card-col-50 {
+    flex: 1 0 calc(50% - 1rem);
+    margin: 0 0.5rem;
+  }
+  .card-col-25 {
+    flex: 1 0 calc(25% - 1rem);
+    margin: 0 0.5rem;
+  }
+  // изменение высоты карт
+  nb-card {
+    margin-bottom: 3vh;
+  } 
+
+  .template-left-top-card {
+    height: 60vh;
+  }
+  .template-left-bottom-card {
+    height: 20vh;
+  }
+
+  .template-right-top-card {
+    height: 30vh;
+  }
+
+  .template-right-medium-card {
+    height: 37vh;
+  }
+  
+  .template-right-bottom-card {
+    height: 10vh;
+  }
+
+  .template-left-top-card,
+  .template-left-bottom-card,
+  .template-right-top-card,
+  .template-right-medium-card,
+  .template-right-bottom-card {
+    max-width: 100%;
+  }
+
+}
